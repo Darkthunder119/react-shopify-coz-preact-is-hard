@@ -28,6 +28,14 @@ function App() {
         type="tel"
         value={value}
         autoComplete="no"
+        onValueChange={values => { 
+          const test = {
+            value: values.value,
+            formatted: values.formattedValue
+          }         
+          console.log(values);
+          console.log(values.formattedValue);
+        }}
       />
     </main>
   );
